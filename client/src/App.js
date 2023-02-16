@@ -8,7 +8,7 @@ import UploadFile from "./components/uploadFile";
 function App() {
   return (
     <>
-      <div className="w-full flex flex-col">
+      <div className="w-full">
         <Routes>
           <Route path="/" element={<AllFiles />}></Route>
           <Route path="/upload-file" element={<UploadFile />}></Route>
