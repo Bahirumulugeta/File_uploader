@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+
+// page routes
+// Import
+import AllFiles from "./components/allFiles";
+import UploadFile from "./components/uploadFile";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="w-full flex flex-col">
+        <Routes>
+          <Route path="/" element={<AllFiles />}></Route>
+          <Route path="/upload-file" element={<UploadFile />}></Route>
+        </Routes>
+      </div>
+    </>
   );
 }
 
